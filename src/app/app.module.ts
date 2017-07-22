@@ -7,28 +7,33 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { QRCodeComponent } from 'angular2-qrcode';
 
 import { HomePage } from '../pages/home/home';
 import { CarrinhoCompras } from '../pages/list/list';
 import { CameraPage } from '../pages/camera/camera';
+import { QrCodePage } from '../pages/qrcode/qrcode';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     CarrinhoCompras,
-    CameraPage
+    CameraPage,
+    QrCodePage,
+    QRCodeComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     CarrinhoCompras,
-    CameraPage
+    CameraPage,
+    QrCodePage
   ],
   providers: [
     StatusBar,

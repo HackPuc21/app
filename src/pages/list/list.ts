@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
+import { QrCodePage } from '../qrcode/qrcode'
 
 @Component({
   selector: 'page-list',
@@ -38,7 +39,11 @@ export class CarrinhoCompras {
     });
   }
 
-  
+  abrirTelaQrCode(){
+    this.navCtrl.push(QrCodePage, {
+      listaFormatada: ''
+    })
+  }
 
   mock(event: any){
     this.itemsSelecionados.push({
