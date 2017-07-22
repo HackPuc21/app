@@ -1,18 +1,11 @@
 <ion-header color="primary">
   <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Compras</ion-title>
+    <ion-title class="div-titulo">Compras</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p color="dark">
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="centralizado"><button secondary ion-button class="botao" (click)="abrirCamera">Ler Código de Barras</button></div>
+  <div class="centralizado"><button secondary ion-button class="botao" (click)="abrirLista">Lista de Produtos</button></div>
+  <div class="centralizado"><button secondary ion-button class="botao" (click)="fecharPedido">Fechar Pedido</button></div>  
 </ion-content>

@@ -1,1 +1,14 @@
-<qr-code [value]="listaFormatada" [size]="150"></qr-code>
+<ion-header color="primary">
+  <ion-navbar color="primary">
+    <ion-title class="div-titulo">QR CODE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="centralizado">
+        <qr-code [value]="listaFormatada" [size]="250"></qr-code>
+    </div>
+    <div class="centralizado">
+        <button class="botao" ion-button secondary>Finalizar Compra</button>
+    </div>
+</ion-content>
