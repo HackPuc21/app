@@ -4,13 +4,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-<<<<<<< HEAD
 import { CarrinhoCompras } from '../pages/list/list';
 
-=======
-import { ListPage } from '../pages/list/list';
+//import { ListPage } from '../pages/list/list';
 import {BarcodeScanner} from '@ionic-native/barcode-scanner';
->>>>>>> a253f0c998822fd050c17cbf387767ab8dc07993
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 

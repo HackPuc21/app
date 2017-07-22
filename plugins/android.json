@@ -7,12 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
-<<<<<<< HEAD
-=======
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "io.ionic.starter"
         },
->>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
         "cordova-plugin-console": {
             "PACKAGE_NAME": "io.ionic.starter"
         },
@@ -32,13 +29,9 @@
             "PACKAGE_NAME": "io.ionic.starter"
         }
     },
-<<<<<<< HEAD
-    "dependent_plugins": {}
-=======
     "dependent_plugins": {
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "io.ionic.starter"
         }
     }
->>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
 }
