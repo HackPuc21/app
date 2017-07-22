@@ -9,7 +9,7 @@ import { CameraPage } from '../camera/camera';
 export class CarrinhoCompras {
   selectedItem: any;
   icons: string[]; 
-  itemsSelecionados : Array<{nome: string, codigoBarras:string}>;
+  itemsSelecionados : Array<{nome: string, codigoBarras:string, quantidade:number}>;
   resolve: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -19,10 +19,21 @@ export class CarrinhoCompras {
         new Promise((ok, notOk) => {
           this.itemsSelecionados  = this.itemsSelecionados ? this.itemsSelecionados : [];
           console.log(this.itemsSelecionados);
+          
+          let index = this.itemsSelecionados.findIndex((item) => {
+            return item.codigoBarras == _text
+          })
+
+          if(index >= 0){
+            this.itemsSelecionados[index].quantidade++;
+          } else {
+
           this.itemsSelecionados.push({
             nome: _text,
-            codigoBarras: _text
+            codigoBarras: _text,
+            quantidade: 1
           });
+          }
         });
     };
   }
@@ -43,7 +54,12 @@ export class CarrinhoCompras {
   mock(event: any){
     this.itemsSelecionados.push({
         nome: 'item' + this.itemsSelecionados.length,
-        codigoBarras: this.itemsSelecionados.length.toString()
+        codigoBarras: this.itemsSelecionados.length.toString(),
+        quantidade: 1
       });
   }
+
+  alteraQuantidade(index:number, alteracao:number) {
+    this.itemsSelecionados[index].quantidade += alteracao
+  };
 }
