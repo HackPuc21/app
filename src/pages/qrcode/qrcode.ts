@@ -16,6 +16,10 @@ export class QrCodePage{
         this.listaFormatada = navParams.get('listaFormatada');
         console.log(this.listaFormatada);
     }
+
+    FinalizarCompra(){
+        this.navController.popToRoot();
+    };
 }
 
 

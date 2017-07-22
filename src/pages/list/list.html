@@ -1,10 +1,10 @@
 <ion-header color="primary">
   <ion-navbar color="primary">
-    <ion-title class="div-titulo">Lista de Produtos</ion-title>
+    <ion-title>Lista de Produtos</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content (press) = "mock($event)">
+<ion-content>
   <ion-list>
     <ion-item *ngFor="let item of itemsSelecionados; let i = index">
       <ion-col col-3 item-start>
@@ -15,14 +15,10 @@
       {{item.nome}}
       <ion-icon name="trash" (click)="deletar($event, i)" item-end></ion-icon>
     </ion-item>
+    <div class="centralizado">
+      <button secondary ion-button class="botao" (click)="abrirTelaCamera()">Ler Código de Barras</button>
+      <button secondary ion-button class="botao" (click)="abrirTelaQrCode()">Fechar Pedido</button>  
+    </div>
   </ion-list>
-
-  <ion-fab right bottom>
-    <button ion-fab color="light"><ion-icon name="arrow-dropup"></ion-icon></button>
-    <ion-fab-list side="top">
-
-      <button ion-fab (click) = "abrirTelaCamera()"><ion-icon name="barcode"></ion-icon></button>
-      <button ion-fab (click) = "abrirTelaQrCode()"><ion-icon name="checkmark-circle"></ion-icon></button>
-    </ion-fab-list>
-  </ion-fab>
 </ion-content>
+

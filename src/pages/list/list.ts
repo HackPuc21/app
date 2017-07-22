@@ -56,14 +56,6 @@ export class CarrinhoCompras {
     })
   }
 
-  mock(event: any){
-    this.itemsSelecionados.push({
-        nome: 'item' + this.itemsSelecionados.length,
-        codigoBarras: this.itemsSelecionados.length.toString(),
-        quantidade: 1
-      });
-  }
-
   alteraQuantidade(index:number, alteracao:number) {
     this.itemsSelecionados[index].quantidade += alteracao
   };
