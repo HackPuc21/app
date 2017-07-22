@@ -52,7 +52,7 @@ export class CarrinhoCompras {
 
   abrirTelaQrCode(){
     this.navCtrl.push(QrCodePage, {
-      listaFormatada: ''
+      listaFormatada: this.formatarString()
     })
   }
 
@@ -67,4 +67,13 @@ export class CarrinhoCompras {
   alteraQuantidade(index:number, alteracao:number) {
     this.itemsSelecionados[index].quantidade += alteracao
   };
+
+  formatarString(){
+    let listaFormatada = "";
+    for(let produto of this.itemsSelecionados){
+      listaFormatada = listaFormatada.concat(produto.quantidade+"*"+produto.codigoBarras+" ");
+    }
+    console.log(listaFormatada);
+    return listaFormatada;
+  }
 }

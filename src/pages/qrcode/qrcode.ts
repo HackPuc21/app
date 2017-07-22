@@ -14,6 +14,7 @@ export class QrCodePage{
     constructor(public navController: NavController, public navParams: NavParams, private barcode: BarcodeScanner){    
         this.navCtrl = navController;
         this.listaFormatada = navParams.get('listaFormatada');
+        console.log(this.listaFormatada);
     }
 }
 
