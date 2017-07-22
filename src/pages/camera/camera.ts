@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform, ToastController } from 'ionic-angular';
 import {BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scanner';
 
 @Component({
@@ -8,14 +8,30 @@ import {BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scann
 })
 
 export class CameraPage{
+    navCtrl: NavController;
     options: BarcodeScannerOptions;
+    resolve: any;
+    toasterController: ToastController;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams, private barcode: BarcodeScanner){
+    constructor(public navController: NavController, public navParams: NavParams, private barcode: BarcodeScanner, private toaster : ToastController){
+        this.toasterController = toaster;
+        this.navCtrl = navController;
+        this.resolve = navParams.get("resolve");
         this.scanBarcode();
     }
 
     async scanBarcode(){
-        const results = await this.barcode.scan();
-        console.log(results);
+        await this.barcode.scan().then((result) => {
+            console.log(result);
+            this.resolve(result.text);
+            this.navCtrl.pop();
+        }, () => {
+            this.toaster.create(
+            {
+                message: 'Erro ao ler código de barras.',
+                duration: 1,
+                position: "top"
+            })
+        });   
     }
 }

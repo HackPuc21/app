@@ -21,7 +21,14 @@ export class CarrinhoCompras {
   }
 
   abrirTelaCamera(){
-    this.navCtrl.push(CameraPage)
+    this.navCtrl.push(CameraPage, {
+      resolve: this.resolve
+    });
+  }
+
+  resolve(nome:any){
+    console.log(this.itemsSelecionados);
+    this.itemsSelecionados.push(nome);
   }
 
   mock(event: any){
