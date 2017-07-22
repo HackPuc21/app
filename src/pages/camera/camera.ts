@@ -23,8 +23,9 @@ export class CameraPage{
     async scanBarcode(){
         await this.barcode.scan().then((result) => {
             console.log(result);
-            this.resolve(result.text);
-            this.navCtrl.pop();
+            this.navCtrl.pop().then(()=>{
+                this.resolve(result.text);
+            });
         }, () => {
             this.toaster.create(
             {

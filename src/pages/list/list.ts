@@ -8,11 +8,23 @@ import { CameraPage } from '../camera/camera';
 })
 export class CarrinhoCompras {
   selectedItem: any;
-  icons: string[];
+  icons: string[]; 
   itemsSelecionados : Array<{nome: string, codigoBarras:string}>;
+  resolve: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.itemsSelecionados = [];
+    this.resolve = (_text)=> {
+        console.log(_text);
+        new Promise((ok, notOk) => {
+          this.itemsSelecionados  = this.itemsSelecionados ? this.itemsSelecionados : [];
+          console.log(this.itemsSelecionados);
+          this.itemsSelecionados.push({
+            nome: _text,
+            codigoBarras: _text
+          });
+        });
+    };
   }
 
   deletar(event: any, index : any) {
@@ -26,10 +38,7 @@ export class CarrinhoCompras {
     });
   }
 
-  resolve(nome:any){
-    console.log(this.itemsSelecionados);
-    this.itemsSelecionados.push(nome);
-  }
+  
 
   mock(event: any){
     this.itemsSelecionados.push({
