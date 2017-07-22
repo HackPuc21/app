@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CameraPage } from '../camera/camera';
 
 @Component({
   selector: 'page-list',
@@ -20,7 +21,7 @@ export class CarrinhoCompras {
   }
 
   abrirTelaCamera(){
-    this.navCtrl.push(CarrinhoCompras)
+    this.navCtrl.push(CameraPage)
   }
 
   mock(event: any){

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 import {BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scanner';
 
 @Component({
@@ -9,8 +10,8 @@ import {BarcodeScanner, BarcodeScannerOptions} from '@ionic-native/barcode-scann
 export class CameraPage{
     options: BarcodeScannerOptions;
 
-    constructor(private barcode: BarcodeScanner){
-
+    constructor(public navCtrl: NavController, public navParams: NavParams, private barcode: BarcodeScanner){
+        this.scanBarcode();
     }
 
     async scanBarcode(){

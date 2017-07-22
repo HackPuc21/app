@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules"
+      "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules"
     ]
   ],
   "_from": "phonegap-plugin-barcodescanner@latest",
@@ -45,7 +45,7 @@
   "_shasum": "d95c72b8aae1683f630fbc0c16dd51ede7ee44eb",
   "_shrinkwrap": null,
   "_spec": "phonegap-plugin-barcodescanner",
-  "_where": "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules",
+  "_where": "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules",
   "author": {
     "name": "Adobe PhoneGap Team"
   },

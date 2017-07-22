@@ -3,17 +3,20 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { CarrinhoCompras } from '../pages/list/list';
-import {BarcodeScanner} from '@ionic-native/barcode-scanner';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
+import { HomePage } from '../pages/home/home';
+import { CarrinhoCompras } from '../pages/list/list';
+import { CameraPage } from '../pages/camera/camera';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CarrinhoCompras
+    CarrinhoCompras,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -23,13 +26,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    CarrinhoCompras
+    CarrinhoCompras,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BarcodeScanner
+    
   ]
 })
 export class AppModule {}
