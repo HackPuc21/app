@@ -23,8 +23,9 @@
   <ion-fab right bottom>
     <button ion-fab color="light"><ion-icon name="arrow-dropup"></ion-icon></button>
     <ion-fab-list side="top">
+
       <button ion-fab (click) = "abrirTelaCamera()"><ion-icon name="barcode"></ion-icon></button>
-      <button ion-fab><ion-icon name="checkmark-circle"></ion-icon></button>
+      <button ion-fab (click) = "abrirTelaQrCode()"><ion-icon name="checkmark-circle"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
 </ion-content>

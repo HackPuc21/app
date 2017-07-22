@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
+import { QrCodePage } from '../qrcode/qrcode'
 
 @Component({
   selector: 'page-list',
@@ -49,7 +50,11 @@ export class CarrinhoCompras {
     });
   }
 
-  
+  abrirTelaQrCode(){
+    this.navCtrl.push(QrCodePage, {
+      listaFormatada: this.formatarString()
+    })
+  }
 
   mock(event: any){
     this.itemsSelecionados.push({
@@ -62,4 +67,13 @@ export class CarrinhoCompras {
   alteraQuantidade(index:number, alteracao:number) {
     this.itemsSelecionados[index].quantidade += alteracao
   };
+
+  formatarString(){
+    let listaFormatada = "";
+    for(let produto of this.itemsSelecionados){
+      listaFormatada = listaFormatada.concat(produto.quantidade+"*"+produto.codigoBarras+" ");
+    }
+    console.log(listaFormatada);
+    return listaFormatada;
+  }
 }
