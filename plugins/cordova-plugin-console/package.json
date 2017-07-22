@@ -10,7 +10,11 @@
         "spec": "1.0.5",
         "type": "version"
       },
+<<<<<<< HEAD
       "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules"
+=======
+      "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules"
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
     ]
   ],
   "_from": "cordova-plugin-console@1.0.5",
@@ -45,7 +49,11 @@
   "_shasum": "f0e29aee9c03cab9e9d883b01d19f22ddd5c8570",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-console@1.0.5",
+<<<<<<< HEAD
   "_where": "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules",
+=======
+  "_where": "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules",
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
   "author": {
     "name": "Apache Software Foundation"
   },

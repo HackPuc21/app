@@ -10,7 +10,11 @@
         "spec": "1.1.4",
         "type": "version"
       },
+<<<<<<< HEAD
       "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules"
+=======
+      "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules"
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
     ]
   ],
   "_from": "cordova-plugin-device@1.1.4",
@@ -45,7 +49,11 @@
   "_shasum": "d5fe74712069d03f6d386ef0bd321b3abd0d38dc",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-device@1.1.4",
+<<<<<<< HEAD
   "_where": "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules",
+=======
+  "_where": "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules",
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
   "author": {
     "name": "Apache Software Foundation"
   },

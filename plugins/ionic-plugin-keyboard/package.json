@@ -10,7 +10,11 @@
         "spec": ">=2.2.1 <2.3.0",
         "type": "range"
       },
+<<<<<<< HEAD
       "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules"
+=======
+      "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules"
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
     ]
   ],
   "_from": "ionic-plugin-keyboard@>=2.2.1 <2.3.0",
@@ -45,7 +49,11 @@
   "_shasum": "f2a9e169bbe9b5522400347c9fd6d3467ee3fa12",
   "_shrinkwrap": null,
   "_spec": "ionic-plugin-keyboard@~2.2.1",
+<<<<<<< HEAD
   "_where": "C:\\Users\\renan\\Documents\\GitHub\\app\\node_modules",
+=======
+  "_where": "C:\\Users\\PC\\Documents\\GitHub\\app\\node_modules",
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
   "author": {
     "name": "Ionic"
   },

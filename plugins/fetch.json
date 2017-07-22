@@ -1,4 +1,23 @@
 {
+<<<<<<< HEAD
+=======
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "registry",
+            "id": "phonegap-plugin-barcodescanner"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat@^1.0.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+>>>>>>> 7f8a2ccd7ec2fabc53f55066f59e835c87f41894
     "cordova-plugin-console": {
         "source": {
             "type": "registry",
