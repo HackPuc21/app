@@ -46,6 +46,7 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
+            "phonegap-plugin-barcodescanner": {},
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
