@@ -6,14 +6,17 @@
 
 <ion-content>
   <ion-list>
+    <ion-item *ngIf="!itemsSelecionados.length">
+      <p color="chumbo">Não existem itens selecionados</p>     
+    </ion-item>
     <ion-item *ngFor="let item of itemsSelecionados; let i = index">
-      <ion-col col-3 item-start>
-        <ion-icon name="remove-circle" (click) = 'alteraQuantidade(i, -1)'></ion-icon>
-          {{item.quantidade}}
-        <ion-icon name="add-circle" (click) = 'alteraQuantidade(i, 1)'></ion-icon>
-      </ion-col>
+      <ion-avatar item-start>
+        <ion-icon name="remove-circle" (click) = 'alteraQuantidade(i, -1)' color="primary"></ion-icon>
+        {{item.quantidade}}
+        <ion-icon name="add-circle" (click) = 'alteraQuantidade(i, 1)' color="primary"></ion-icon>
+      </ion-avatar>
       {{item.nome}}
-      <ion-icon name="trash" (click)="deletar($event, i)" item-end></ion-icon>
+      <ion-icon name="trash" (click)="deletar($event, i)" item-end color="primary"></ion-icon>
     </ion-item>
     <div class="centralizado">
       <button secondary ion-button class="botao" (click)="abrirTelaCamera()">Ler Código de Barras</button>

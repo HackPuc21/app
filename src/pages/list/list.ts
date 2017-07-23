@@ -16,7 +16,7 @@ export class CarrinhoCompras {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.itemsSelecionados = [];
     this.resolve = (_text)=> {
-        console.log(_text);
+        if(!_text) return;
         new Promise((ok, notOk) => {
           this.itemsSelecionados  = this.itemsSelecionados ? this.itemsSelecionados : [];
           console.log(this.itemsSelecionados);
@@ -28,7 +28,7 @@ export class CarrinhoCompras {
           if(index >= 0){
             this.itemsSelecionados[index].quantidade++;
           } else {
-
+ 
           this.itemsSelecionados.push({
             nome: _text,
             codigoBarras: _text,
@@ -54,6 +54,14 @@ export class CarrinhoCompras {
     this.navCtrl.push(QrCodePage, {
       listaFormatada: this.formatarString()
     })
+  }
+
+  mock(event: any){
+    this.itemsSelecionados.push({
+        nome: 'item' + this.itemsSelecionados.length,
+        codigoBarras: this.itemsSelecionados.length.toString(),
+        quantidade: 1
+      });
   }
 
   alteraQuantidade(index:number, alteracao:number) {
