@@ -1,0 +1,13 @@
+<ion-header color="primary">
+  <ion-navbar color="primary">
+    <ion-title>Reconhecedor de Voz</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <button ion-button (click) = "isSpeechSuported()">Is Speech Supported?</button>
+    <button ion-button (click) = "getPermission()">Get Permission</button>
+    <button ion-button (click) = "hasPermission()">Has Permission?</button>
+    <button ion-button (click) = "getSupportedLanguages()">Get Supported Lenguages</button>
+    <button ion-button (click) = "listenForSpeech()">Listen for Speech</button>
+</ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
 import { QrCodePage } from '../qrcode/qrcode'
+import { VozPage } from '../voz/voz';
 
 @Component({
   selector: 'page-list',
@@ -54,6 +55,10 @@ export class CarrinhoCompras {
     this.navCtrl.push(QrCodePage, {
       listaFormatada: this.formatarString()
     })
+  }
+
+  abrirTelaVoz(){
+    this.navCtrl.push(VozPage);
   }
 
   alteraQuantidade(index:number, alteracao:number) {
