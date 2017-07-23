@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CameraPage } from '../camera/camera';
 import { QrCodePage } from '../qrcode/qrcode'
+import { VozPage } from '../voz/voz';
 
 @Component({
   selector: 'page-list',
@@ -55,13 +56,9 @@ export class CarrinhoCompras {
       listaFormatada: this.formatarString()
     })
   }
-
-  mock(event: any){
-    this.itemsSelecionados.push({
-        nome: 'item' + this.itemsSelecionados.length,
-        codigoBarras: this.itemsSelecionados.length.toString(),
-        quantidade: 1
-      });
+  
+  abrirTelaVoz(){
+    this.navCtrl.push(VozPage);
   }
 
   alteraQuantidade(index:number, alteracao:number) {

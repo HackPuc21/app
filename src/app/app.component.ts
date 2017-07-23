@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { CarrinhoCompras } from '../pages/list/list';
 import { CameraPage } from '../pages/camera/camera';
+import { VozPage } from '../pages/voz/voz';
 
 @Component({
   templateUrl: 'app.html'

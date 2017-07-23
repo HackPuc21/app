@@ -8,11 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { QRCodeComponent } from 'angular2-qrcode';
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
 
 import { HomePage } from '../pages/home/home';
 import { CarrinhoCompras } from '../pages/list/list';
 import { CameraPage } from '../pages/camera/camera';
 import { QrCodePage } from '../pages/qrcode/qrcode';
+import { VozPage } from '../pages/voz/voz';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { QrCodePage } from '../pages/qrcode/qrcode';
     CarrinhoCompras,
     CameraPage,
     QrCodePage,
-    QRCodeComponent
+    QRCodeComponent,
+    VozPage
   ],
   imports: [
     BrowserModule,
@@ -33,12 +36,15 @@ import { QrCodePage } from '../pages/qrcode/qrcode';
     HomePage,
     CarrinhoCompras,
     CameraPage,
-    QrCodePage
+    QrCodePage,
+    VozPage
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    SpeechRecognition,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     
   ]
